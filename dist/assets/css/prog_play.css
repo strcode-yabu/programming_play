@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --prog-play-color-code-text: rgb(30, 180, 30);
+  --prog-play-color-code-bg: rgb(0, 0, 0);
+  --prog-play-font-code: "JetBrains Mono", "BIZ UDPGothic", monospace;
+}
+
+@-webkit-keyframes prog_play__cursor_flash {
+  0%, 50% {
+    opacity: 0;
+  }
+  51%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes prog_play__cursor_flash {
+  0%, 50% {
+    opacity: 0;
+  }
+  51%, 100% {
+    opacity: 1;
+  }
+}
+.prog_plau__code_area {
+  height: 100%;
+  color: var(--prog-play-color-code-text);
+  font-size: 0.8rem;
+  font-family: var(--prog-play-font-code);
+  line-height: 1.4;
+  white-space: pre-wrap;
+  background: var(--prog-play-color-code-bg);
+  margin: 0;
+  padding: 1.25em 0.75em;
+  overflow-y: auto;
+}
+.prog_plau__code_area, .prog_plau__code_area::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+.prog_plau__code_area::after {
+  content: "|";
+  margin-left: 0.025em;
+  -webkit-animation: prog_play__cursor_flash 1s infinite;
+          animation: prog_play__cursor_flash 1s infinite;
+  padding: 0;
+}/*# sourceMappingURL=prog_play.css.map */
