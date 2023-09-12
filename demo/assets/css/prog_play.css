@@ -5,15 +5,6 @@
   --prog-play-font-code: "JetBrains Mono", "BIZ UDPGothic", monospace;
 }
 
-@-webkit-keyframes prog_play__cursor_flash {
-  0%, 50% {
-    opacity: 0;
-  }
-  51%, 100% {
-    opacity: 1;
-  }
-}
-
 @keyframes prog_play__cursor_flash {
   0%, 50% {
     opacity: 0;
@@ -35,14 +26,12 @@
   overflow-y: auto;
 }
 .prog_plau__code_area, .prog_plau__code_area::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
 }
 .prog_plau__code_area::after {
   content: "|";
   margin-left: 0.025em;
-  -webkit-animation: prog_play__cursor_flash 1s infinite;
-          animation: prog_play__cursor_flash 1s infinite;
+  animation: prog_play__cursor_flash 1s infinite;
   padding: 0;
-}/*# sourceMappingURL=prog_play.css.map */
+}

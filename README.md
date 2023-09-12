@@ -9,6 +9,18 @@
 3. Include "prog-play.js".
 4. Create an instance of the "ProgrammingPlay" class and write the code.
 
+## Development environment
+
+### Setting the development environment
+
+1. Go to the **programming_play** project directory.
+2. Run `npm install` or `yarn` .
+
+### Command list
+
+- `gulp dist` : Compile the code in `src`.
+- `gulp demo` :Copy the files compiled into `dist` to the `demo` folder.
+
 ## Sample
 
 ### `/demo/index.html`
