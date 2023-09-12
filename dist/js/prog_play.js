@@ -13,7 +13,7 @@ class ProgrammingPlay {
   constructor (codeAreaWrap) {
     this.codeAreaWrap = codeAreaWrap;
     this.codeArea = document.createElement('pre');
-    this.codeArea.classList.add('prog_plau__code_area');
+    this.codeArea.classList.add('prog_play__code_area');
     codeAreaWrap.appendChild(this.codeArea);
   }
   /**
