@@ -1,11 +1,7 @@
 const { src, dest } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
 
-const compileScss = () => {
-  src('./src/scss/prog_play.scss')
-    .pipe(
-      sass()
-    )
+const copyCss = () => {
+  src('./src/css/prog_play.css')
     .pipe(dest('./dist/css'));
 }
 
@@ -15,7 +11,7 @@ const copyJavaScript = () => {
 }
 
 const buildDist = async () => {
-  compileScss();
+  copyCss();
   copyJavaScript();
 }
 
