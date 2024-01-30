@@ -1,4 +1,4 @@
-# JavaScript plugin "Proggraming Play"
+# JavaScript plugin "Programming Play"
 
 - Latest version 1.0.0
 
