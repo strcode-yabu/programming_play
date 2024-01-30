@@ -1,6 +1,6 @@
 # JavaScript plugin "Programming Play"
 
-- Latest version 1.0.0
+- Latest version 1.1.0
 
 ## How to use
 
