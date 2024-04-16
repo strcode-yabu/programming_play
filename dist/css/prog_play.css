@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=M+PLUS+1+Code:wght@100..700&display=swap");
 
 :root {
   --prog-play-color-code-text: rgb(30, 180, 30);
   --prog-play-color-code-bg: rgb(0, 0, 0);
 
-  --prog-play-font-code: 'JetBrains Mono', 'BIZ UDPGothic', monospace;
+  --prog-play-font-code: "JetBrains Mono", "M PLUS 1 Code", monospace;
 }
 
 @keyframes prog_play__cursor_flash {
@@ -35,7 +36,7 @@
     margin: 0;
   }
   &::after {
-    content: '|';
+    content: "|";
     margin-left: .025em;
     animation: prog_play__cursor_flash 1s infinite;
     padding: 0;
