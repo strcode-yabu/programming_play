@@ -6,7 +6,7 @@
   "author": "S.Yabunaka[strCode] <yabunaka@strcode.biz>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^5.0.1"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
