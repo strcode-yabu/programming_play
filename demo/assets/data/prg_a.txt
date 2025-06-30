@@ -1,0 +1,13 @@
+10  print('Start test program.')
+20  
+30  string = 'I love programming.'
+40  len = 0
+50  
+60  string.each(char) {
+70    print(char)
+80    sleep(1000)
+90    len += 1
+100 }
+110 
+120 print('The length of the string is ' + len.toString() + '.')
+130 print('hello...')
