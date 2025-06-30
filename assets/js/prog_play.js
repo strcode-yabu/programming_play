@@ -1,8 +1,17 @@
 /**
  * Programming play.
- * @version 1.0.0
+ * @version 1.3.0
  */
 class ProgrammingPlay {
+
+  /**
+   * The loaded code text.
+   * 
+   * @author S.Yabunaka[strCode]
+   * @since 1.3.0
+   */
+  codeString = '';
+
   /**
    * Instance generation.
    * 
@@ -16,6 +25,7 @@ class ProgrammingPlay {
     this.codeArea.classList.add('prog_play__code_area');
     codeAreaWrap.appendChild(this.codeArea);
   }
+  
   /**
    * Wait timer processing.
    * 
@@ -27,18 +37,32 @@ class ProgrammingPlay {
   sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   /**
+   * Load the program file.
+   * 
+   * @author S.Yabunaka[strCode]
+   * @since 1.3.0
+   * @param {String} filePath Program file path.
+   */
+  loadPrgramFile = async filePath => {
+    await fetch(filePath)
+    .then(response => response.text())
+    .then(data => {
+      this.codeString = data;
+    });
+  }
+
+  /**
    * Draw code in the code area.
    * 
    * @author S.Yabunaka[strCode]
    * @since 1.0.0
-   * @param {String} codeText Code text.
    */
-  writeCode = async codeText => {
+  writeCode = async () => {
     const codeAreaHeight = this.codeArea.clientHeight;
     let scrollHeight = this.codeArea.scrollHeight;
     let countLine = 0
   
-    for (const codeLine of codeText.split('\n')) {
+    for (const codeLine of this.codeString.split('\n')) {
       if(countLine > 0) {
         this.codeArea.innerHTML += `\n`;
         scrollHeight = this.codeArea.scrollHeight;
@@ -59,10 +83,9 @@ class ProgrammingPlay {
    * 
    * @author S.Yabunaka[strCode]
    * @since 1.0.0
-   * @param {Int} len The number of characters to remove.
    */
-  deleteCode = async len => {
-    let countLen = len;
+  deleteCode = async () => {
+    let countLen = this.codeString.length;
     let codeAreaText = this.codeArea.innerHTML;
 
     while(countLen > 0) {
@@ -79,13 +102,11 @@ class ProgrammingPlay {
    * @author S.Yabunaka[strCode]
    * @since 1.0.0
    */
-  clearCode = () => {
-    const clearCommand = `cls\n`;
+  clearCode = async () => {
+    this.codeString = `cls\n`;
 
-    this.writeCode(clearCommand).then( () => {
-      return this.sleep(250);
-    }).then(() => {
-      this.codeArea.innerHTML = '';
-    });
+    await this.writeCode();
+    await this.sleep(250);
+    this.codeArea.innerHTML = '';
   }
 }
