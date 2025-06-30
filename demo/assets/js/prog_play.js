@@ -25,6 +25,7 @@ class ProgrammingPlay {
     this.codeArea.classList.add('prog_play__code_area');
     codeAreaWrap.appendChild(this.codeArea);
   }
+  
   /**
    * Wait timer processing.
    * 

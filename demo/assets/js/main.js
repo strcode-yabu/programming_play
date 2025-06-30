@@ -1,7 +1,6 @@
 'use strict';
 
 {
-
   const programming = async () => {
     const codeArea = document.getElementById('code_area');
     const pg = new ProgrammingPlay(codeArea);
@@ -20,4 +19,3 @@
 
   programming();
 }
-
