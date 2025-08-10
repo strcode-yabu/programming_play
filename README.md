@@ -1,6 +1,6 @@
 # JavaScript plugin "Programming Play"
 
-- Latest version 1.3.0
+- Latest version 1.4.0
 
 ## How to use
 
@@ -36,9 +36,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+    <header class="header">
+      <!-- omitted -->
+    </header>
     <main class="main">
       <section class="code_area__wrap" id="code_area"></section>
     </main>
+    <footer class="footer">
+      <!-- omitted -->
+    </footer>
     <script src="./assets/js/prog_play.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
@@ -54,16 +60,53 @@
     const codeArea = document.getElementById('code_area');
     const pg = new ProgrammingPlay(codeArea);
 
+    await pg.loadPrgramFile('./assets/data/title.txt');
+    await pg.putCode();
+    await pg.loadPrgramFile('./assets/data/boot.txt');
+    await pg.putCode();
+    await pg.sleep(1000);
+    await pg.loadPrgramFile('./assets/data/root.txt');
+    await pg.putCode();
+    await pg.sleep(1000);
+    await pg.loadPrgramFile('./assets/data/type_cmd__inputPrg.txt');
+    await pg.typeCode();
+    await pg.sleep(500);
+    await pg.loadPrgramFile('./assets/data/bar.txt');
+    await pg.putCode();
+    await pg.sleep(2000);
     await pg.loadPrgramFile('./assets/data/prg_a.txt');
-    await pg.writeCode();
+    await pg.typeCode();
     await pg.sleep(500);
     await pg.loadPrgramFile('./assets/data/prg_b.txt');
     await pg.deleteCode();
     await pg.sleep(2000);
     await pg.loadPrgramFile('./assets/data/prg_c.txt');
-    await pg.writeCode();
+    await pg.typeCode();
+    await pg.sleep(1000);
+    await pg.loadPrgramFile('./assets/data/bar.txt');
+    await pg.putCode();
+    await pg.loadPrgramFile('./assets/data/root.txt');
+    await pg.putCode();
+    await pg.sleep(1000);
+    await pg.loadPrgramFile('./assets/data/type_cmd__run.txt');
+    await pg.typeCode();
+    await pg.sleep(500);
+    await pg.loadPrgramFile('./assets/data/prg_run_a.txt');
+    await pg.typeCode(1000);
+    await pg.loadPrgramFile('./assets/data/prg_run_b.txt');
+    await pg.putCode();
+    await pg.loadPrgramFile('./assets/data/prg_run_c.txt');
+    await pg.putCode();
+    await pg.loadPrgramFile('./assets/data/root.txt');
+    await pg.putCode();
+    await pg.sleep(1000);
+    await pg.loadPrgramFile('./assets/data/type_cmd__cls.txt');
+    await pg.typeCode();
     await pg.sleep(2000);
     await pg.clearCode();
+    await pg.sleep(500);
+    await pg.loadPrgramFile('./assets/data/root.txt');
+    await pg.putCode();
   }
 
   programming();
