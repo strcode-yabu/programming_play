@@ -5,7 +5,9 @@
   --prog-play-color-code-text: rgb(30, 180, 30);
   --prog-play-color-code-bg: rgb(0, 0, 0);
 
+  --prog-play-font-size: 1rem;
   --prog-play-font-code: "JetBrains Mono", "M PLUS 1 Code", monospace;
+  --prog-play-line-height: 1.4;
 }
 
 @keyframes prog_play__cursor_flash {
@@ -22,9 +24,9 @@
 .prog_play__code_area {
   height: 100%;
   color: var(--prog-play-color-code-text);
-  font-size: .8rem;
+  font-size: var(--prog-play-font-size);
   font-family: var(--prog-play-font-code);
-  line-height: 1.4;
+  line-height: var(--prog-play-line-height);
   white-space: pre-wrap;
   background: var(--prog-play-color-code-bg);
   margin: 0;
