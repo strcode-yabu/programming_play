@@ -87,13 +87,14 @@ class ProgrammingPlay {
    * 
    * @author S.Yabunaka[strCode]
    * @since 1.4.0
-   * @param {Int} ms Millisecond. (Default: 50)
+   * @param {Int} ms Millisecond. (Default: 0)
    */
-  putCode = async () => {
+  putCode = async (ms = 0) => {
     let countLine = 0
   
     for (const codeLine of this.codeString.split('\n')) {
       await this.breakLine(countLine);
+      await this.sleep(ms);
       this.codeArea.innerHTML += codeLine;
       countLine++;
     }
