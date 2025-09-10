@@ -104,6 +104,7 @@ body {
 .main {
   padding: 32px 16px;;
   flex: 1;
+  overflow-y: auto;
 }
 
 .footer {
